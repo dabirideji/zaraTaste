@@ -1,0 +1,9 @@
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+#sectionbg {
+    background-image: url("../assets/images/bgimg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
