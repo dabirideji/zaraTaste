@@ -36,6 +36,8 @@ if(isset($_POST['signUp'])){
 
         $query = mysqli_query($conn, $sql);
         if($query){
+            session_start();
+            $_SESSION['email']="$email";
             echo "
         <script>
             alert('DATA INSERTED SUCCESSFULLY');
