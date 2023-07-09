@@ -41,7 +41,7 @@ if(isset($_POST['signUp'])){
             echo "
         <script>
             alert('DATA INSERTED SUCCESSFULLY');
-            window.location.href='signup.html';
+            window.location.href='dashboard.php';
         </script>
     ";
         }

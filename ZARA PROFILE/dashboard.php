@@ -3,6 +3,7 @@ session_start();
 if(!$_SESSION['email']){
     header("location:login.php");
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,6 +13,11 @@ if(!$_SESSION['email']){
     <title>Document</title>
 </head>
 <body>
+
     WELCOME TO DASHBOARD
+    <a href="view-details.php?uemail='<?=$_SESSION['email']?>'">
+        <button>view details</button>
+    </a>
+    
 </body>
 </html>
