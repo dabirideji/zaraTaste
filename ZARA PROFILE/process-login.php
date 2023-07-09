@@ -13,9 +13,9 @@ if(isset($_POST['login'])){
     $row=mysqli_num_rows($query);
     $result= mysqli_fetch_assoc($query);
     if ($row>0) {
-        // session_start();
-        // $_SESSION['email']=$result['EMAIL'];
-        // $_SESSION['uName']=$result['USERNAME'];
+        session_start();
+        $_SESSION['email']=$result['EMAIL'];
+        $_SESSION['uName']=$result['USERNAME'];
         
         echo "<script>alert('login succes');
             window.location.href='dashboard.php';
