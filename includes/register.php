@@ -1,7 +1,7 @@
 <?php 
 session_start(); // Start the session
 
-if (isset($_POST['signup'])) {
+if (isset($_POST['submit'])) {
     include('connect.php');
 
     // Variables for the inputs
@@ -43,21 +43,17 @@ if (isset($_POST['signup'])) {
                 header('location: ../register.php?error=Usernameialreadytaken');
                 exit();
             } else {
-                // Generate and store the OTP
-                $otp = mt_rand(100000, 999999);
-                $_SESSION['otp'] = $otp; // Store the OTP in the session
-                $_SESSION['userName'] = $userName; // Store the userName in the session
-                $sql = "INSERT INTO information (firstName,lastName,userName,pword,email,otp) VALUES (?,?,?,?,?,?)";
+                $sql = "INSERT INTO information (firstName,lastName,userName,pword,email) VALUES (?,?,?,?,?)";
                 $stmt = mysqli_stmt_init($conn);
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
                     header('location: ../register.php?error=sqlerror');
                     exit();
                 } else {
                     $hashpwd = password_hash($pword, PASSWORD_DEFAULT);
-                    mysqli_stmt_bind_param($stmt, "ssssss", $firstName, $lastName, $userName, $hashpwd, $email, $otp);
+                    mysqli_stmt_bind_param($stmt, "sssss", $firstName, $lastName, $userName, $hashpwd, $email);
                     mysqli_stmt_execute($stmt);
                     mysqli_stmt_close($stmt);
-
+                    header('../login.php');
                     exit();
                 }
             }

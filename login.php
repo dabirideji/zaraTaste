@@ -5,10 +5,10 @@
     <title>Document</title>
 </head>
 <body>
-<form action="" method="post">
-        <input type="text" placeholder="Username" name="userName">
-        <input type="password" placeholder="Password" name="pword">
-        <input type="button" value="Submit"  name="submit">
+<form action="./includes/login.php" method="post">
+        <input type="text" placeholder="Username" required name="userName"><br><br>
+        <input type="password" placeholder="Password" required name="pword"><br><br>
+        <input type="submit" value="Submit"  name="login">
     </form>
 </body>
 </html>
