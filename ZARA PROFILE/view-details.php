@@ -19,10 +19,10 @@ var_dump($result);
         <th>EMAIL</th>
         <th>PHONE</th>
     </tr><tr>
-        <td><?=$result['FULLNAME']?></td>
-        <td><?=$result['USERNAME']?></td>
-        <td><?=$result['EMAIL']?></td>
-        <td><?=$result['PHONE']?></td>
+        <td><input type="text" value="<?=$result['FULLNAME']?>"></td>
+        <td><input type="text" value="<?=$result['USERNAME']?>"></td>
+        <td><input type="text" value="<?=$result['EMAIL']?>"></td>
+        <td><input type="text" value="<?=$result['PHONE']?>"></td>
     </tr>
-        
 </table>
+<button>UPDATE DETAILS</button>
