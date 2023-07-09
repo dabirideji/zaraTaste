@@ -9,4 +9,20 @@ $row=mysqli_num_rows($query);
 $result= mysqli_fetch_assoc($query);
 var_dump($result);
 
+
+
 ?>
+<table>
+    <tr>
+        <th>FULLNAME</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>PHONE</th>
+    </tr><tr>
+        <td><?=$result['FULLNAME']?></td>
+        <td><?=$result['USERNAME']?></td>
+        <td><?=$result['EMAIL']?></td>
+        <td><?=$result['PHONE']?></td>
+    </tr>
+        
+</table>
