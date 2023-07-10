@@ -10,6 +10,8 @@
         <input type="text" placeholder="username" name="uName"> <br>
         <input type="text" placeholder="password" name = "pass"><br>
         <button type="submit" name="login">Log in</button>
+        or 
+        <a href="signup.html">sign up</a>
     </form>
 </body>
 </html>
