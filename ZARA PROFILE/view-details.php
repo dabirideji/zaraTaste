@@ -1,4 +1,11 @@
 <?php
+session_start();
+if(!$_SESSION['email']){
+    header("location:login.php");
+}
+
+?>
+<?php
 include "conn.php";
 session_start();
 // $_SESSION['email']=$result['EMAIL'];
