@@ -1,3 +1,6 @@
+<?php 
+session_start()
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -87,6 +90,20 @@
           </button>
         </div>
       </div>
+      <h1 style="font-size: 30px; font-family:'Times New Roman', Times, serif; font-weight:900;">
+      <?php
+      if(isset($_SESSION['userid'])){
+        // Display the username
+        echo 'Welcome, ' . $_SESSION['userid'] . '!';
+    }else{
+        // Username is not set, redirect to the login page
+        header("Location: login.php");
+        exit();
+    }
+      
+      ?>
+      </h1>
+     
     </nav>
 
     <!-- Navbar Ends -->
