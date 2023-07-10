@@ -21,7 +21,7 @@ var_dump($result);
     </tr><tr>
         <td><input type="text" value="<?=$result['FULLNAME']?>"></td>
         <td><input type="text" value="<?=$result['USERNAME']?>"></td>
-        <td><input type="text" value="<?=$result['EMAIL']?>"></td>
+        <td><input type="text" value="<?=$result['EMAIL']?>" disabled></td>
         <td><input type="text" value="<?=$result['PHONE']?>"></td>
     </tr>
 </table>

@@ -18,6 +18,9 @@ if(!$_SESSION['email']){
     <a href="view-details.php?uemail='<?=$_SESSION['email']?>'">
         <button>view details</button>
     </a>
-    
+    <a href="logout.php">
+        <button>logout</button>
+    </a>
+
 </body>
 </html>
